@@ -174,6 +174,7 @@ color: coral
     background-color: white;
     display: flex;
     align-items: center;
+   
 }
 .password{
     color: coral;
@@ -181,11 +182,13 @@ color: coral
     align-self: center;
 }
 /*Sign-in/up*/
-.sign-in-js .first-content .first-colum, 
-.sign-in-js .first-content .second-colum{
+
+.sign-in-js .first-content .first-colum{
     z-index: -1;
 }
-.sign-in-js .second-content .first-colum,
+.sign-in-js .second-content .first-colum{
+    z-index: 14;
+}
 .sign-in-js .second-content .second-colum{
    z-index: 12; 
 }    
@@ -195,14 +198,131 @@ color: coral
     border-bottom-left-radius: 0px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    animation: slidein 2s;
+
+    z-index: 13;
 }
-.sign-up-js .second-content .first-colum,
-.sign-up-js .second-content .second-colum{
+.sign-up-js .content::before{
+    animation: slideout 2s;
+   z-index: 13;
+
+}
+.sign-up-js .second-content .first-colum{
     z-index: -1;
      
 }
-.sign-up-js .first-content .first-colum, 
+.sign-up-js .first-content .first-colum{
+    z-index: 14;
+}
 .sign-up-js .first-content .second-colum{
     z-index: 12;
 }
+/*Deslocamento do ceonteudo*/
+.sign-in-js .first-content .second-colum{
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoEsq 1s;
+}
+.sign-up-js .second-content .second-colum{
+ z-index: -1;
+    position: relative;
+    animation: deslocamentoDir 1s;
+}
+/*Animacao de deslocamento*/
+@keyframes deslocamentoEsq{
+    from{
+        left: 0;
+        opacity: 1;
+        z-index: 13;
+   }
+    /*  25% {
+        left: -80px;
+        opacity: .5;
+    }
+    
+    50%{
+        left: -100px;
+        opacity: .2;   
+    }*/
+    to{
+        left: -110px;
+        opacity: 0;
+        z-index: 13;
+    }
+}
+@keyframes deslocamentoDir {
+    
+    from{
+        left: 0;
+        z-index: 13;
+    }
+
+ /*    25% {
+         left: 80px;
+    }
+    
+    50%{
+        left: 100px;      
+    }*/
+
+    to{
+        left: 110px;
+        z-index: -1;
+    }
+}
 /*Animação CSS*/
+@keyframes slidein{
+    from {
+        left: 0;
+        width:  40%;
+    }
+
+    /*25% {
+        left: 15%;
+        width: 50%;
+    }*/
+
+    50%{
+        left: 30%;
+        width: 50%;
+
+    }
+
+    /*75% {
+        left: 50%;
+        width: 50%;
+    }*/
+
+    to {
+        left: 60%;
+        width: 40%;
+    }
+}
+
+@keyframes slideout {
+    from {
+        left: 60%;
+        width: 40%;
+    }
+
+   /* 25% {
+        left: 50%;
+        width: 50%;
+    }*/
+
+    50%{
+        left: 30%;
+        width: 50%;
+
+    }
+
+   /* 75% {
+        left: 15%;
+        width: 50%;
+    }
+*/
+    to {
+        left: 0;
+        width:  40%;
+    }
+}
