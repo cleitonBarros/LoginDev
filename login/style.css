@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Zen+Kurenaido&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Playfair Display', serif;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgb(233, 205, 184);
+}
+.content{
+    background: white;
+    border-radius: 15px;
+    height: 50%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+.content::before {
+    content: "";
+    position: absolute;
+    background-color: coral;
+    width: 40%;
+    height: 100%;
+}
+.title{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.title-welcome{
+    color: white;
+}
+.title-second{
+    color: coral;
+}
+.description{
+    font-size: 14px;
+    font-weight: 300px; 
+    line-height: 30px;
+}
+.description-primary{
+    color: white;
+}
+.description-second{
+    color: coral;
+}
+.btn{
+    border-radius: 15px;
+    text-transform: Coral;
+    color: #fff;
+    font-size: 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    align-self: center;
+    border: none;
+}
+.btn-primary{
+background-color: transparent;
+border: 1px solid #fff;
+
+}
+.btn-primary:hover{
+    background-color: white;
+    color: coral;
+}
+.btn-second:hover{
+background-color: white;
+border: 1px solid coral;
+color: coral
+}
+.btn-second{
+   background-color: coral;
+   color: white;
+   border: 1px solid white;
+}
+.second-colum{
+      flex:2 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+.second-content{
+    position: absolute;
+    display: none;
+}
+.first-colum{
+   text-align: center;
+   flex: 1 0 auto;
+   z-index: 10;
+}
+.first-content{
+    display: flex;
+}
+.list-SM{
+    display: flex;
+    list-style-type: none;
+    
+}
+.item-SM{
+    border: 1px solid rgb(233, 205, 184);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 55%
+}
+.form input{
+    height: 45px;
+    border: none;
+    background-color: snow ;
+    margin: 8px;
+}
