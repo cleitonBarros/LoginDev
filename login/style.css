@@ -15,10 +15,10 @@ body{
     background: rgb(233, 205, 184);
 }
 .content{
-    background: white;
+    background: #fff;
     border-radius: 15px;
     height: 50%;
-    width: 80%;
+    width: 900px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,6 +31,12 @@ body{
     background-color: coral;
     width: 40%;
     height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+
+
+    left: 0%;
 }
 .title{
     font-size: 20px;
@@ -65,10 +71,12 @@ body{
     width: 150px;
     align-self: center;
     border: none;
+    margin-top: 1rem ;
 }
 .btn-primary{
 background-color: transparent;
 border: 1px solid #fff;
+transition: background-color 0.5s;
 
 }
 .btn-primary:hover{
@@ -84,29 +92,58 @@ color: coral
    background-color: coral;
    color: white;
    border: 1px solid white;
+   transition: background-color 0.5s;
 }
 .second-colum{
-      flex:2 0 auto;
+      width: 60%;
       display: flex;
       flex-direction: column;
       align-items: center;
 }
 .second-content{
     position: absolute;
-    display: none;
+    display: flex;
+    
+}
+.second-content .first-colum{
+    z-index: -1;
+    order: 2;
+}
+.second-content .second-colum{
+    order: 1;
+  
+    z-index: -1;
 }
 .first-colum{
    text-align: center;
-   flex: 1 0 auto;
+  width: 40%;
    z-index: 10;
 }
 .first-content{
     display: flex;
+    
+}
+.first-content .second-colum{
+    z-index: 12;
 }
 .list-SM{
     display: flex;
     list-style-type: none;
     
+}
+.link-SM:hover .item-SM{
+    background-color: coral;
+    color: white;
+    border-color: coral;
+     
+
+
+}
+.link-SM .item-SM{
+    transition: background-color 1s;
+}
+.social-midia{
+    margin:1rem 0;
 }
 .item-SM{
     border: 1px solid rgb(233, 205, 184);
@@ -115,6 +152,10 @@ color: coral
     height: 35px;
     line-height: 35px;
     text-align: center;
+    
+}
+.link-SM:not(:first-child){
+    margin-left: 10px;
 }
 .form{
     display: flex;
@@ -124,6 +165,44 @@ color: coral
 .form input{
     height: 45px;
     border: none;
-    background-color: snow ;
-    margin: 8px;
+    width: 100%;
+    background-color: snow;
+    margin: 8px ;
+   
 }
+.label-input{
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+.password{
+    color: coral;
+    font-size: 14px;
+    align-self: center;
+}
+/*Sign-in/up*/
+.sign-in-js .first-content .first-colum, 
+.sign-in-js .first-content .second-colum{
+    z-index: -1;
+}
+.sign-in-js .second-content .first-colum,
+.sign-in-js .second-content .second-colum{
+   z-index: 12; 
+}    
+.sign-in-js .content::before{
+    left:60%;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.sign-up-js .second-content .first-colum,
+.sign-up-js .second-content .second-colum{
+    z-index: -1;
+     
+}
+.sign-up-js .first-content .first-colum, 
+.sign-up-js .first-content .second-colum{
+    z-index: 12;
+}
+/*Animação CSS*/
